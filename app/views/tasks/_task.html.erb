@@ -1,0 +1,24 @@
+<%if task.status == false %>
+  <li id='task<%=task.id%>'>
+    <p>
+      <%= check_box_tag :status, 1,false, data: { remote: true, url: task_path(task.id), params: { id: task.id, status: 1}.to_param, method: "put" }%>  
+      <%= task.title  %>
+        <% unless task.deadline.nil? %>
+        , Deadline : <%= task.deadline.strftime('%D')  %>
+      <% end %>
+    </p>
+<%else%>
+  <li class='checked' id='task<%=task.id%>'>
+    <p>
+      <%= check_box_tag :status, 1 ,true, data: { remote: true, url: task_path(task.id), params: { id: task.id, status: 0}.to_param, method: "put" }%>
+      <%= task.title  %>
+      <% unless task.deadline.nil? %>
+        , Deadline : <%= task.deadline.strftime('%D')  %>
+      <% end %>
+    </p>
+<%end%>
+
+  <div class='text-right mr-2'>
+  <a class='trash' href="<%=task_path(task.id)%>"data-method='delete' data-confirm='Etes vous sur?' data-remote='true'> <i class="fas fa-trash"></i></a>
+  </div>
+</li> 

@@ -1,0 +1,59 @@
+
+.header-mail{
+  background-color: #f1f0f0;
+  border-radius: 15px;
+}
+
+.header-mail:hover{
+  background-color: #e4e3e3;
+}
+
+h4{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: rgb(67, 129, 230);
+}
+
+.content-mail{
+  background-color: #f1f0f0;
+  border-radius: 15px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.objects{
+  height: 500px;
+  overflow: scroll;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0px 0px 5px 1px rgb(214, 214, 214);
+  border-radius: 10px;
+}
+
+#body-mail{
+  height: 500px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0px 0px 5px 1px rgb(214, 214, 214);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+a:link{
+  color: rgb(232, 236, 99);;
+  font-weight: bold;
+}
+a:link:hover{
+  color: rgb(239, 145, 21);
+  text-decoration: none;
+}
+.read a{
+  text-decoration: none;
+  color:darkgrey;
+  font-style: italic;
+}
+
+.btn:link{
+  color: white;
+}
+.btn:link:hover{
+  color: white;
+}

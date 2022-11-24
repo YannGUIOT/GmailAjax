@@ -1,0 +1,9 @@
+document.getElementById('text<%=@email.id%>').classList.toggle('read');
+
+if(document.getElementById('text<%=@email.id%>').className !== 'read'){
+  document.getElementById('btn-no-read').remove();
+  document.getElementById('body-mail').insertAdjacentHTML("beforeend", "<%= j render 'btn_read'%>")
+} else if (document.getElementById('text<%=@email.id%>').className === 'read'){
+  document.getElementById('btn-read').remove();
+  document.getElementById('body-mail').insertAdjacentHTML("beforeend", "<%= j render 'btn_unread'%>")
+}

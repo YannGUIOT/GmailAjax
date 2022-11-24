@@ -1,0 +1,10 @@
+<h3><%= @email.object%></h3>
+<hr>
+<%= @email.body%>
+<br><br><br>
+<%= link_to "Supprimer", email_path(@email.id), method:'delete',confirm:"Etes vous sur ?", remote: true, class: "btn btn-danger mb-2"  %>
+
+<%=render 'btn_unread'%>
+
+
+

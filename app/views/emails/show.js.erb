@@ -1,0 +1,6 @@
+a = document.getElementById('body-mail');
+a.textContent = '';
+a.insertAdjacentHTML("afterbegin", '<%= j  render 'mail_body'%>' )
+
+b = document.getElementById('text<%=@email.id%>').classList.remove('read');
+b = document.getElementById('text<%=@email.id%>').classList.add('read');

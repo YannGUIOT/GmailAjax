@@ -1,0 +1,24 @@
+<div class='text-center'>
+  <%= link_to "Créer un email", emails_path, method:'post',remote: true, class: "btn btn-info mb-2"  %>
+</div>
+
+<div class='container header-mail p-2 row text-center mx-auto mb-2' >
+  <div class= 'w-25'>
+    <h4>Object</h4>
+  </div>
+  <div class= 'w-75'>
+    <h4>Content</h4>
+  </div>
+</div>
+
+<div class='container row m-auto content-mail p-3 d-flex justify-content-around'>
+
+  <%=render 'mail_objects_list'%>
+
+  <div class= 'border w-50 m-2' id=body-mail>
+  </div>
+
+</div>
+
+        
+      

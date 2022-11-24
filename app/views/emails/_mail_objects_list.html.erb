@@ -1,0 +1,12 @@
+<div class= 'container w-25 m-2 pb-2 objects' id='objects'>
+    <%@emails.each do |email|%>
+      <div id='mail<%=email.id%>'>
+        <%if email.read == true %>
+          <p class='read' id='text<%=email.id%>'><a href=<%=email_path(email.id)%> data-remote=true ><%=email.object%></a></p>
+        <%else%>
+          <p id='text<%=email.id%>'><a href=<%=email_path(email.id)%> data-remote=true ><%=email.object%></a></p>  
+        <%end%> 
+        <hr>
+      </div>
+    <%end%>
+</div>

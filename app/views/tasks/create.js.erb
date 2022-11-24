@@ -1,0 +1,6 @@
+CatList = document.getElementById('<%=@category.title%>_tasks');
+CatList.  ", "<%= j render 'task', task: @task %>");
+tasksList = document.getElementsByTagName('li');
+newTask = tasksList[tasksList.length-1];
+console.log(newTask);
+newTask.classList.toggle('task-added');
